@@ -593,7 +593,7 @@ require('lazy').setup({
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --  See `:help lsp-config` for information about keys and how to configure
       local servers = {
-          ['lua-language-server'] = {},
+        ['lua-language-server'] = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -605,10 +605,6 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
       }
- 
-
-        
-
 
       -- Ensure the servers and tools above are installed
       --
@@ -661,14 +657,13 @@ require('lazy').setup({
     end,
   },
 
-    {
-  "williamboman/mason-lspconfig.nvim",
-  dependencies = {
-    "williamboman/mason.nvim",
-    "neovim/nvim-lspconfig",
-      }
+  {
+    'williamboman/mason-lspconfig.nvim',
+    dependencies = {
+      'williamboman/mason.nvim',
+      'neovim/nvim-lspconfig',
+    },
   },
-
 
   { -- Autoformat
     'stevearc/conform.nvim',
@@ -884,12 +879,12 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
