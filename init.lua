@@ -606,9 +606,10 @@ require('lazy').setup({
         -- ts_ls = {},
       }
         require('mason-lspconfig').setup {
-  ensure_installed = vim.tbl_keys(servers),
+  ensure_installed = {"lua-language-server'}
 }
 
+        
 require('mason-lspconfig').setup_handlers {
   function (server_name)
     require('lspconfig')[server_name == 'lua-language-server' and 'lua_ls' or server_name].setup {}
