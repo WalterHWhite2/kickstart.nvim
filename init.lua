@@ -606,7 +606,7 @@ require('lazy').setup({
         -- ts_ls = {},
       }
         require('mason-lspconfig').setup {
-  ensure_installed = {"lua-language-server'}
+  ensure_installed = {"lua-language-server"}
 }
 
         
