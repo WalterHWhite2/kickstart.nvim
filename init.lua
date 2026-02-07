@@ -666,6 +666,14 @@ require('mason-lspconfig').setup_handlers {
     end,
   },
 
+    {
+  "williamboman/mason-lspconfig.nvim",
+  dependencies = {
+    "williamboman/mason.nvim",
+    "neovim/nvim-lspconfig",
+  },
+}
+
   { -- Autoformat
     'stevearc/conform.nvim',
     event = { 'BufWritePre' },
