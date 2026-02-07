@@ -593,6 +593,7 @@ require('lazy').setup({
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --  See `:help lsp-config` for information about keys and how to configure
       local servers = {
+          ['lua-language-server'] = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -604,6 +605,15 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
       }
+        require('mason-lspconfig').setup {
+  ensure_installed = vim.tbl_keys(servers),
+}
+
+require('mason-lspconfig').setup_handlers {
+  function (server_name)
+    require('lspconfig')[server_name == 'lua-language-server' and 'lua_ls' or server_name].setup {}
+  end
+}
 
       -- Ensure the servers and tools above are installed
       --
