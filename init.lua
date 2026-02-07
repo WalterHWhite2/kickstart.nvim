@@ -610,11 +610,7 @@ require('lazy').setup({
 }
 
         
-require('mason-lspconfig').setup_handlers {
-  function (server_name)
-    require('lspconfig')[server_name == 'lua-language-server' and 'lua_ls' or server_name].setup {}
-  end
-}
+
 
       -- Ensure the servers and tools above are installed
       --
