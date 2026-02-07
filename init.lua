@@ -671,6 +671,7 @@ require('mason-lspconfig').setup_handlers {
   dependencies = {
     "williamboman/mason.nvim",
     "neovim/nvim-lspconfig",
+      }
   },
 
 
