@@ -672,7 +672,7 @@ require('mason-lspconfig').setup_handlers {
     "williamboman/mason.nvim",
     "neovim/nvim-lspconfig",
   },
-}
+
 
   { -- Autoformat
     'stevearc/conform.nvim',
